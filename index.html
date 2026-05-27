@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterApp</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <section class="container">
+            <a class="navbar-brand" href="#"><img src="assets/images/logotipo blanco.png" alt="logo" class="logo"></a>
+
+            <form class="d-flex search-box mx-auto">
+                <input class="form-control" type="search" placeholder="Buscar productos">
+            </form>
+
+            <section class="d-flex gap-2">
+                <a href="login.html" class="iniciar">Iniciar Sesión</a>
+                <a href="registro.html" class="registro">Registrarse</a>
+            </section>
+        </section>
+    </nav>
+
+
+    <!-- HERO SLIDER -->
+    <section class="container mt-4">
+        <section id="heroCarousel" class="carousel slide hero-slider" data-bs-ride="carousel">
+
+            <section class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </section>
+
+            <section class="carousel-inner">
+
+                <section class="carousel-item active">
+                    <img src="assets/images/slider/b-1.webp" class="d-block w-100">
+                    
+                </section>
+
+                <section class="carousel-item">
+                    <img src="assets/images/slider/b-2.webp" class="d-block w-100">
+                    
+                </section>
+
+                <section class="carousel-item">
+                    <img src="assets/images/slider/b-3.webp" class="d-block w-100">
+                    
+                </section>
+
+            </section>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </section>
+    </section>
+
+    <section class="container mt-5">
+
+    <section class="row">
+
+        <section class="col-md-3">
+            <section class="card p-3">
+                <h5 class="titulo">Mis productos</h5>
+                <p>✔️ 15 productos</p>
+            </section>
+        </section>
+
+        <section class="col-md-3">
+            <section class="card p-3">
+                <h5 class="titulo">Intercambios pendientes</h5>
+                <p>🙋🏼‍♂️|🙋🏼‍♀️ 4 solicitudes</p>
+            </section>
+        </section>
+
+        <section class="col-md-3">
+            <section class="card p-3">
+                <h5 class="titulo">Intercambios completados</h5>
+                <p>👍🏼 8 trueques</p>
+            </section>
+        </section>
+
+        <section class="col-md-3">
+            <section class="card p-3">
+                <h5 class="titulo">Calificación</h5>
+                <p>⭐ 4.9 </p>
+            </section>
+        </section>
+
+    </section>
+</section>
+
+
+    <section>
+    <section class="container mt-5">
+
+        <h2>Proponer intercambio</h2>
+
+        <section class="row">
+
+            <!-- Producto deseado -->
+            <section class="col-md-6">
+                <h4>Producto que deseas</h4>
+
+                <img id="productPreview"
+                    src="assets/images/productos/1.jpg"
+                    class="img-fluid rounded shadow"
+                    alt="Vista previa del producto">
+            </section>
+
+            <!-- Selector de productos -->
+            <section class="col-md-6">
+                <h4>Selecciona tu producto</h4>
+
+                <select id="productSelector" class="form-control">
+                    <option value="assets/images/productos/1.jpg">
+                        Iphone 17 Pro Max
+                    </option>
+
+                    <option value="assets/images/productos/2.jpg">
+                        MacBook Air M1 13" 256 GB
+                    </option>
+
+                    <option value="assets/images/productos/3.jpg">
+                        Bicicleta
+                    </option>
+
+                    <option value="assets/images/productos/4.jpg">
+                        PlayStation 4
+                    </option>
+                    <option value="assets/images/productos/5.jpg">
+                        Televisor de 55'
+                    </option>
+                    <option value="assets/images/productos/6.jpg">
+                        Drone con Control RC 2
+                    </option>
+                </select>
+
+                <textarea class="form-control mt-3"
+                    placeholder="Mensaje para el usuario"></textarea>
+
+                <button class="enviar-propuesta">
+                    Enviar propuesta
+                </button>
+            </section>
+
+        </section>
+    </section>
+</section>
+
+<script>
+    // Obtener elementos
+    const selector = document.getElementById("productSelector");
+    const preview = document.getElementById("productPreview");
+
+    // Cambiar imagen al seleccionar producto
+    selector.addEventListener("change", function () {
+        preview.src = this.value;
+    });
+</script>
+
+    <!-- BENEFICIOS -->
+    <section class="container my-5">
+        <section class="row g-4">
+
+            <section class="col-md-3">
+                <section class="benefit-card1">
+                    <i class="bi bi-arrow-repeat"></i>
+                    <h5>Intercambio Fácil</h5>
+                    <p>Publica y recibe propuestas.</p>
+                </section>
+            </section>
+
+            <section class="col-md-3">
+                <section class="benefit-card1">
+                    <i class="bi bi-shield-fill-check"></i>
+                    <h5>Seguro</h5>
+                    <p>Usuarios verificados.</p>
+                </section>
+            </section>
+
+            <section class="col-md-3">
+                <section class="benefit-card1">
+                    <i class="bi bi-cash-coin"></i>
+                    <h5>Sin Dinero</h5>
+                    <p>Solo intercambio.</p>
+                </section>
+            </section>
+
+            <section class="col-md-3">
+                <section class="benefit-card1">
+                    <i class="bi bi-people-fill"></i>
+                    <h5>Comunidad</h5>
+                    <p>Miles de usuarios activos.</p>
+                </section>
+            </section>
+
+        </section>
+    </section>
+
+
+    <!-- PRODUCTOS -->
+    <section class="container my-5">
+        <h2 class="mb-4">Productos Destacados</h2>
+
+        <section class="row g-4">
+
+            <section class="col-md-2">
+                <section class="card product-card">
+                    <img src="assets/images/productos/1.jpg" class="card-img-top">
+                    <section class="card-body">
+                        <span class="badge exchange-badge1">Disponible</span>
+                        <h5 class="mt-2">iPhone 17 Pro Max 256gb</h5>
+                        <p>Cambio por smartwatch</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="col-md-2">
+                <section class="card product-card">
+                    <img src="assets/images/productos/2.jpg" class="card-img-top">
+                    <section class="card-body">
+                        <span class="badge exchange-badge">Intercambio</span>
+                        <h5 class="mt-2">MacBook Air M1 13" 256 GB</h5>
+                        <p>Cambio por bicicleta</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="col-md-2">
+                <section class="card product-card">
+                    <img src="assets/images/productos/3.jpg" class="card-img-top">
+                    <section class="card-body">
+                        <span class="badge exchange-badge">Intercambio</span>
+                        <h5 class="mt-2">Bicicleta MTB</h5>
+                        <p>Cambio por celular</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="col-md-2">
+                <section class="card product-card">
+                    <img src="assets/images/productos/4.jpg" class="card-img-top">
+                    <section class="card-body">
+                        <span class="badge exchange-badge1">Disponible</span>
+                        <h5 class="mt-2">PlayStation 4</h5>
+                        <p>Cambio por TV</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="col-md-2">
+                <section class="card product-card">
+                    <img src="assets/images/productos/5.jpg" class="card-img-top">
+                    <section class="card-body">
+                        <span class="badge exchange-badge">Intercambio</span>
+                        <h5 class="mt-2">Televisor de 55'</h5>
+                        <p>Cambio por Play Station</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="col-md-2">
+                <section class="card product-card">
+                    <img src="assets/images/productos/6.jpg" class="card-img-top">
+                    <section class="card-body">
+                        <span class="badge exchange-badge">Intercambio</span>
+                        <h5 class="mt-2">Drone con Control RC 2</h5>
+                        <p>Cambio por Iphone 17 Pro Max</p>
+                    </section>
+                </section>
+            </section>
+
+        </section>
+    </section>
+
+
+    
+
+
+    <!-- COMO FUNCIONA -->
+    <section class="how-section">
+        <section class="container text-center">
+            <h2 class="mb-5">¿Cómo funciona?</h2>
+
+            <section class="row">
+
+                <section class="col-md-4">
+                    <i class="bi bi-upload step-icon"></i>
+                    <h4>Publica</h4>
+                    <p>Sube tu producto fácilmente.</p>
+                </section>
+
+                <section class="col-md-4">
+                    <i class="bi bi-search-heart-fill step-icon"></i>
+                    <h4>Busca</h4>
+                    <p>Encuentra productos interesantes.</p>
+                </section>
+
+                <section class="col-md-4">
+                    <i class="bi bi-arrow-left-right step-icon"></i>
+                    <h4>Intercambia</h4>
+                    <p>Conecta con otros usuarios.</p>
+                </section>
+
+            </section>
+        </section>
+    </section>
+
+
+    <!-- FOOTER -->
+     <footer class="text-center">
+        <p>
+            2026 InterApp - Creado por 
+            <strong><a>Grupo de los Jueves</a></strong>
+        </p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

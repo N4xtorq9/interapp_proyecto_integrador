@@ -1,0 +1,191 @@
+body {
+    background: #f5f5f5;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar-custom {
+    background: #000000;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white !important;
+    font-size: 28px;
+}
+
+.search-box {
+    width: 50%;
+}
+
+.buscar {
+    width: 50%;
+    border-radius: 50px;
+}
+
+.btn-orange {
+    background: #FF4D00;
+    color: white;
+    border: none;
+}
+
+.btn-orange:hover {
+    background: #e84300;
+    color: white;
+}
+
+.registro{
+    background: #FF4D00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.registro:hover{
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+    
+}
+
+.iniciar{
+    background: #fff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.iniciar:hover{
+    background: #FF4D00;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.enviar-propuesta{
+    background: #223E83;
+    color: white;
+    border: none;
+    margin: 20px 0  ;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.enviar-propuesta:hover{
+    background: #FF4D00;
+    color: white;
+    border: none;
+    margin: 20px 0  ;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+/* Hero */
+.hero-slider img {
+    height: 700px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Beneficios */
+.benefit-card1 {
+    background: #ffffff;
+    color: #223E83;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+
+.benefit-card1 i {
+    font-size: 35px;
+    color: #223E83;
+}
+
+
+/* Productos */
+.product-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.exchange-badge {
+    background: #FF4D00;
+}
+
+.exchange-badge1 {
+    background: darkgreen;
+}
+
+/* Cómo funciona */
+.how-section {
+    background: #000000;
+    color: white;
+    padding: 60px 0;
+}
+
+
+.step-icon {
+    font-size: 45px;
+    color: #ffffff;
+}
+
+.logo {
+    height: 40px;
+}
+.titulo {
+    font-weight: bold;
+    color: #223E83;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
