@@ -246,6 +246,7 @@ button,
     cursor:pointer;
 
     text-decoration:none;
+    margin: 5px;
 }
 
 button:hover,
