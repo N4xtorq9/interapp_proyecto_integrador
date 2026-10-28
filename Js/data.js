@@ -13,6 +13,13 @@ let usuarios = [
         telefono: "3016970638",
         contrasena: "123456"
     },
+    {
+        id: "id3",
+        nombre: "Felipe Madrid",
+        correo: "fmadrid@cesde.net",
+        telefono: "3104981209",
+        contrasena: "1234567"
+    },
     
 ];
 
