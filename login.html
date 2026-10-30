@@ -4,77 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterApp | Iniciar Sesión</title>
 
-    <link rel="stylesheet" href="/interapp_proyecto_integrador/Css/style.css">
+    <!-- Estilos (carpeta CSS junto a este archivo) -->
+    <link rel="stylesheet" href="CSS/style.css">
 
-    <!-- ICONOS -->
+    <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/logo.png">
-    
-    <title>InterApp</title>
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
 </head>
 
 <body>
-    <!-- 3. Login -->
+    <!-- Login -->
     <section class="container1">
         <h2>Iniciar Sesión</h2>
 
         <form>
-            <section class="social-container">
-                <img src="assets/images/logo.png" alt="" width="180">
-            </section>
-
-            <div class="form-group">
-              <label for="correo" class="form-label"></label>
-              <input 
-                type="email" 
-                id="correo" 
-                name="correo" 
-                class="form-input" 
-                placeholder="tu.correo@ejemplo.com" 
-                required
-              >
+            <div class="social-container">
+                <img src="assets/images/logo.png" alt="Logo de InterApp">
             </div>
 
             <div class="form-group">
-              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.35rem;">
-                <label for="clave" class="form-label" style="margin-bottom: 0;"></label>
-                
-              </div>
-              <input 
-                type="password" 
-                id="clave" 
-                name="clave" 
-                class="form-input" 
-                placeholder="••••••••••••" 
-                required
-              >
-              <a href="#" style="font-size: 0.8rem; color: var(--color-text-muted); text-decoration: underline;">¿Olvidaste tu contraseña?</a>
+                <label for="correo" class="sr-only">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    class="form-input"
+                    placeholder="tu.correo@ejemplo.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="clave" class="sr-only">Contraseña</label>
+                <input
+                    type="password"
+                    id="clave"
+                    name="clave"
+                    class="form-input"
+                    placeholder="••••••••••••"
+                    autocomplete="current-password"
+                    required
+                >
             </div>
 
-            <button id="btn-login" type="button" class="btn btn-primary btn-block" style="padding: 0.9rem; margin-top: var(--space-sm);">
-              Iniciar Sesión
-            </button>
-            <br>
-            <br>
-            <button id="btn-login" type="button" class="btn btn-primary btn-block" style="padding: 0.9rem; margin-top: var(--space-sm);">
-              Registrarse
+            <a href="#" class="olvido">¿Olvidaste tu contraseña?</a>
+
+            <button id="btn-login" type="button" class="btn btn-primary btn-block">
+                Iniciar Sesión
             </button>
 
-            <span class="separador1">o inicia sesión con tu correo</span>
-            <!-- BOTÓN GOOGLE -->
+            <button id="btn-registro" type="button" class="btn btn-secondary btn-block">
+                Registrarse
+            </button>
+
+            <span class="separador1">o inicia sesión con tu correo de Google</span>
+
+            <!-- Botón Google -->
             <button type="button" class="google-btn">
                 <i class="fa-brands fa-google"></i>
                 Ingresa con Google
             </button>
         </form>
     </section>
-    <section>
 
-    </section>
-
-    <script type="module" src="./js/auth-controller.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./Js/auth-controller.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
