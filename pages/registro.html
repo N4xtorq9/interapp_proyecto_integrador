@@ -4,70 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/interapp_proyecto_integrador/Css/style.css">
+    <title>InterApp | Registro</title>
 
-    <!-- ICONOS -->
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.png">
-   
-    <title>InterApp</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logo.png">
 </head>
 
 <body>
-
+    <!-- Registro -->
     <section class="container-registro" id="container">
-
         <section class="form-container">
-
-            <form action="#">
-
+            <form action="autenticacion.html">
                 <h2>Registro de Usuario</h2>
 
                 <section class="social-container">
-                    <img src="assets/images/logo.png" alt="" width="180">
+                    <img src="../assets/images/logo.png" alt="Logo de InterApp">
                 </section>
 
+                <input type="text" name="nombre" placeholder="Nombre" autocomplete="name" required>
+                <input type="text" name="usuario" placeholder="Usuario" autocomplete="username" required>
 
+                <label for="nacimiento" class="label-campo">Fecha de nacimiento</label>
+                <input type="date" id="nacimiento" name="nacimiento" required>
 
-                <input type="text" placeholder="Nombre" required>
+                <input type="email" name="correo" placeholder="Correo Electrónico" autocomplete="email" required>
+                <input type="email" name="correo2" placeholder="Confirmar Correo Electrónico" autocomplete="email" required>
+                <input type="password" name="clave" placeholder="Contraseña" autocomplete="new-password" required>
+                <input type="password" name="clave2" placeholder="Confirmar Contraseña" autocomplete="new-password" required>
+                <input type="tel" name="celular" placeholder="Celular" autocomplete="tel" required>
 
-                <input type="text" placeholder="Usuario" required>
+                <button class="botones" type="submit">Crear Usuario</button>
 
-                <input type="date" placeholder="Fecha Nacimiento" required>
+                <span class="separador">o regístrate con tu correo de Google</span>
 
-                <input type="email" placeholder="Correo Electrónico" required>
-
-                <input type="email" placeholder="Confirmar Correo Electrónico" required>
-
-                <input type="password" placeholder="Contraseña" required>
-
-                <input type="password" placeholder="Confirmar Contraseña" required>
-
-                <input type="number" placeholder="Celular" required>
-
-                <button class="botones" type="button" onclick="window.location.href='/pages/autenticacion.html'">
-
-                    Crear Usuario
-
-                </button>
-
-                <br>
-                <span class="separador">o regístrate con tu correo</span>
-                <!-- BOTÓN GOOGLE -->
+                <!-- Botón Google -->
                 <button type="button" class="google-btn">
                     <i class="fa-brands fa-google"></i>
                     Registrarse con Google
                 </button>
-
             </form>
-
         </section>
     </section>
-
-    <br>
-    <br>
-    <br>
-
 </body>
 
 </html>
