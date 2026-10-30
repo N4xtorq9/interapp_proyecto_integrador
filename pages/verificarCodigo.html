@@ -4,33 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterApp | Verificación de código</title>
 
-    <link rel="stylesheet" href="/interapp_proyecto_integrador/Css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.png">
-    
+    <link rel="stylesheet" href="../CSS/style.css">
 
-    <link rel="stylesheet" href="/interapp_proyecto_integrador/Css/style.css">
-
-    <title>InterApp</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logo.png">
 </head>
 
 <body>
+    <!-- Verificación de código -->
     <section class="container3" id="container">
         <section class="form-container sign-up-container">
-            <form action="#">
+            <form action="../login.html">
                 <h2>Verificación de Código</h2>
+
                 <section class="social-container">
-                    <img src="assets/images/logo.png" alt="" width="180">
+                    <img src="../assets/images/logo.png" alt="Logo de InterApp">
                 </section>
 
-                <form>
-                    <input type="number" name="" placeholder="Código" id="">
-                    <button type="button" onclick="window.location.href='login.html'">
-                        Verificar
-                    </button>
+                <input type="text" name="codigo" id="codigo" placeholder="Código" inputmode="numeric" autocomplete="one-time-code" required>
 
-                </form>
-
+                <button type="submit">Verificar</button>
+            </form>
+        </section>
+    </section>
 </body>
 
 </html>
