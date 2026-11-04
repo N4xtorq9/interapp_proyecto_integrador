@@ -7,9 +7,9 @@ let clave = document.querySelector("#clave").value;
 let usuario = buscarUsuario(correo, clave);
 
 if(usuario){
-    redirectAlert("Bienvenido al sistema " + usuario.nombre, "success", "/dashboard.html");
+    redirectAlert("Bienvenido al sistema " + usuario.nombre, "success", "/interapp_proyecto_integrador/dashboard.html");
 }   else{
-        redirectAlert("Error de credenciales", "error", "/login.html");
+        redirectAlert("Error de credenciales", "error", "/interapp_proyecto_integrador/login.html");
     }
 }
 
