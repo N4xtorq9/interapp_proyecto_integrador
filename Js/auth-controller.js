@@ -7,6 +7,9 @@ let clave = document.querySelector("#clave").value;
 let usuario = buscarUsuario(correo, clave);
 
 if(usuario){
+    // Se guarda quién inició sesión, para saber de quién son los productos
+    localStorage.setItem("usuarioId", usuario.id);
+    localStorage.setItem("usuarioNombre", usuario.nombre);
     redirectAlert("Bienvenido al sistema " + usuario.nombre, "success", "/dashboard.html");
 }   else{
         redirectAlert("Error de credenciales", "error", "/login.html");
