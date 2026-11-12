@@ -1,0 +1,22 @@
+# Credenciales: nunca subir a GitHub
+.env
+
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# Archivos que genera Vaadin
+node_modules/
+package.json
+package-lock.json
+tsconfig.json
+types.d.ts
+vite.config.ts
+vite.generated.ts
+src/main/frontend/generated/
+src/main/bundles/
+
+# Editores y sistema
+.idea/
+*.iml
+.DS_Store
