@@ -79,6 +79,13 @@ body{
     padding:30px 20px;
     color:white;
     transition:0.3s;
+    /* Columna para poder mandar "Cerrar Sesión" al fondo */
+    display:flex;
+    flex-direction:column;
+    /* El menú se queda fijo en la pantalla al bajar */
+    position:sticky;
+    top:0;
+    height:100vh;
 }
 
 .logo{
@@ -106,6 +113,16 @@ body{
 
 .sidebar-mobile-logout{
     display:none !important;
+}
+
+.menu{
+    list-style:none;
+    padding-left:0;
+}
+
+/* Deja "Cerrar Sesión" en la parte de abajo del menú */
+.sidebar-footer{
+    margin-top:auto;
 }
 
 .menu li{
@@ -609,6 +626,8 @@ footer a{
     .sidebar{
         width:100%;
         min-height:auto;
+        height:auto;
+        position:static;
     }
 
     .logo{
