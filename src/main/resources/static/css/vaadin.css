@@ -1,0 +1,145 @@
+/* Pantallas privadas de Vaadin: mismos colores del home */
+vaadin-app-layout::part(navbar) {
+    background: #000000;
+}
+
+vaadin-app-layout::part(drawer) {
+    background: #000000;
+}
+
+vaadin-app-layout vaadin-drawer-toggle {
+    color: #ffffff;
+}
+
+vaadin-side-nav-item::part(link) {
+    color: #ffffff;
+}
+
+vaadin-side-nav-item::part(content) {
+    background: transparent;
+}
+
+vaadin-side-nav-item[current]::part(link) {
+    background: #FF4D00;
+    color: #ffffff;
+}
+
+.logo-interapp {
+    height: 40px;
+    display: block;
+}
+
+.enlace-home {
+    display: block;
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+vaadin-button.boton-salir {
+    margin: 8px 16px;
+    background: #ffffff;
+    color: #000000;
+    --vaadin-button-text-color: #000000;
+    border-radius: 50px;
+}
+
+vaadin-button.boton-naranja {
+    background: #FF4D00;
+    color: #ffffff;
+    --vaadin-button-text-color: #ffffff;
+    border-radius: 50px;
+}
+
+/* Perfil */
+.perfil-tarjeta {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+vaadin-avatar.perfil-foto {
+    --vaadin-avatar-size: 130px;
+    background: #223E83;
+    color: #ffffff;
+}
+
+.perfil-datos {
+    flex: 1;
+    min-width: 220px;
+}
+
+.perfil-datos h2 {
+    color: #223E83;
+    margin: 0 0 6px;
+}
+
+.perfil-datos p {
+    margin: 6px 0;
+}
+
+.perfil-estadistica {
+    text-align: center;
+    color: #223E83;
+}
+
+.perfil-estadistica h3 {
+    font-size: 40px;
+    margin: 0;
+    color: #FF4D00;
+}
+
+.perfil-estadistica p {
+    margin: 0;
+}
+
+/* Mis productos */
+.productos-cuadricula {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.producto-tarjeta {
+    padding: 16px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto-tarjeta img {
+    width: 100%;
+    box-sizing: border-box;
+    height: 180px;
+    padding: 45px;
+    object-fit: contain;
+    background: #eef1f8;
+    border-radius: 10px;
+}
+
+.producto-tarjeta h4 {
+    margin: 10px 0 6px;
+}
+
+.producto-tarjeta p {
+    margin: 0;
+    color: #223E83;
+}
+
+.producto-estado {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 2px 10px;
+    border-radius: 50px;
+    background: #FF4D00;
+    color: #ffffff;
+    font-size: 13px;
+}

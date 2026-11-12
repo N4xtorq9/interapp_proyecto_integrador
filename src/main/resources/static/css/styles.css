@@ -96,15 +96,29 @@ body {
 
 /* Hero */
 .hero-slider img {
-    height: 700px;
+    height: 400px;
     object-fit: cover;
     border-radius: 15px;
 }
 
 .carousel-caption {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.55);
     border-radius: 10px;
-    padding: 20px;
+    padding: 12px 20px;
+    left: 50%;
+    right: auto;
+    bottom: 40px;
+    width: min(520px, 90%);
+    transform: translateX(-50%);
+}
+
+.carousel-caption h2 {
+    font-size: 26px;
+    margin-bottom: 4px;
+}
+
+.carousel-caption p {
+    margin-bottom: 12px;
 }
 
 /* Beneficios */
@@ -140,7 +154,9 @@ body {
 
 .product-card img {
     height: 220px;
-    object-fit: cover;
+    object-fit: contain;
+    background: #eef1f8;
+    padding: 55px;
 }
 
 .exchange-badge {
@@ -177,10 +193,6 @@ footer {
     background-color: #000000;
     color: #fff;
     font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
     text-align: center;
 }
 
@@ -189,3 +201,80 @@ footer p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* Categorías */
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.categoria-btn {
+    background: #ffffff;
+    color: #223E83;
+    border: 1px solid #223E83;
+    padding: 6px 18px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.categoria-btn:hover,
+.categoria-btn.activa {
+    background: #223E83;
+    color: #ffffff;
+}
+
+/* Textos de la tarjeta de producto */
+.categoria-texto,
+.producto-dueno {
+    color: #6c757d;
+}
+
+.categoria-texto {
+    margin-left: 6px;
+}
+
+.producto-nombre {
+    font-size: 16px;
+}
+
+.cambio-por {
+    color: #223E83;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.mensaje-productos {
+    text-align: center;
+    padding: 40px 0;
+    color: #6c757d;
+}
+
+/* Celular */
+@media (max-width: 768px) {
+    .navbar-custom .container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .search-box {
+        order: 3;
+        width: 100%;
+    }
+
+    .hero-slider img {
+        height: 240px;
+    }
+
+    .carousel-caption {
+        padding: 10px;
+        bottom: 30px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 18px;
+    }
+
+    .carousel-caption p {
+        display: none;
+    }
+}
