@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Panel | InterApp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="app-page">
+    <nav class="app-nav">
+      <a class="brand" href="../index.html" aria-label="InterApp"
+        ><img
+          class="brand-logo"
+          src="../assets/interapp-logo.png"
+          alt="InterApp Intercambio Fácil"
+      /></a>
+      <div class="nav-links">
+        <a class="active" href="dashboard.html">Panel</a
+        ><a href="productos.html">Productos</a
+        ><a href="intercambios.html">Intercambios</a>
+      </div>
+      <div class="nav-actions">
+        <div class="notification-wrap">
+          <button
+            class="notification-bell"
+            id="notificationBell"
+            type="button"
+            aria-label="Ver notificaciones"
+            aria-expanded="false"
+            title="Notificaciones"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"
+              />
+            </svg>
+            <span class="notification-badge" id="notificationBadge" hidden
+              >0</span
+            >
+          </button>
+          <div class="notification-panel" id="notificationPanel" hidden>
+            <div class="notification-panel-heading">
+              <strong>Notificaciones</strong><span>InterApp</span>
+            </div>
+            <div id="notificationList" class="notification-list"></div>
+          </div>
+        </div>
+        <button class="btn btn-outline-primary btn-sm" id="logoutBtn">
+          Cerrar sesión
+        </button>
+      </div>
+    </nav>
+    <main class="container app-main">
+      <div class="welcome-row">
+        <div>
+          <span class="eyebrow">TU ESPACIO INTERAPP</span>
+          <h1>¡Hola, <span id="userName">amigo/a</span>! 👋</h1>
+          <p class="muted">Este es el resumen de tu actividad.</p>
+        </div>
+        <a class="btn btn-primary" href="productos.html"
+          >＋ Publicar producto</a
+        >
+      </div>
+      <section class="gallery-banner" aria-label="Galería de InterApp">
+      <div class="gallery-heading">
+        <div><span class="eyebrow">DESCUBRE · COMPARTE · RENUEVA</span><h2>Un mundo de posibilidades para intercambiar</h2></div>
+        <p>Inspírate, descubre nuevas ideas y encuentra tu próximo intercambio.</p>
+      </div>
+
+      <div id="interappBannerSlider" class="carousel slide carousel-fade interapp-slider"
+           data-bs-ride="carousel" data-bs-interval="5500" data-bs-pause="hover" data-bs-touch="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#interappBannerSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Mostrar banner 1"></button>
+          <button type="button" data-bs-target="#interappBannerSlider" data-bs-slide-to="1" aria-label="Mostrar banner 2"></button>
+          <button type="button" data-bs-target="#interappBannerSlider" data-bs-slide-to="2" aria-label="Mostrar banner 3"></button>
+          <button type="button" data-bs-target="#interappBannerSlider" data-bs-slide-to="3" aria-label="Mostrar banner 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/assets/banner-01.webp" class="d-block w-100" alt="Intercambia, conecta y transforma">
+          </div>
+          <div class="carousel-item">
+            <img src="/assets/banner-02.webp" class="d-block w-100" alt="Miles de cosas, nuevas historias">
+          </div>
+          <div class="carousel-item">
+            <img src="/assets/banner-03.webp" class="d-block w-100" alt="Juntos hacemos más con menos">
+          </div>
+          <div class="carousel-item">
+            <img src="/assets/banner-04.webp" class="d-block w-100" alt="Jornada de intercambio y reutilización">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#interappBannerSlider" data-bs-slide="prev" aria-label="Banner anterior">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#interappBannerSlider" data-bs-slide="next" aria-label="Banner siguiente">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </section>
+      <div class="row g-3 stats-row">
+        <div class="col-md-4">
+          <div class="stat-card">
+            <span>Mis productos</span><strong id="productCount">0</strong
+            ><small>Productos publicados</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card">
+            <span>Intercambios</span><strong id="exchangeCount">0</strong
+            ><small>Solicitudes registradas</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card">
+            <span>Disponibles</span><strong id="availableCount">0</strong
+            ><small>Listos para intercambiar</small>
+          </div>
+        </div>
+      </div>
+      <section class="content-card mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <h2>Empieza a explorar</h2>
+            <p class="muted mb-0">
+              Administra tus publicaciones y descubre oportunidades.
+            </p>
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a class="quick-link" href="productos.html"
+              ><span>📦</span>
+              <div>
+                <b>Mis productos</b
+                ><small>Publica, edita y administra tus objetos.</small>
+              </div>
+              <strong>→</strong></a
+            >
+          </div>
+          <div class="col-md-6">
+            <a class="quick-link" href="intercambios.html"
+              ><span>🤝</span>
+              <div>
+                <b>Mis intercambios</b
+                ><small>Consulta tus propuestas y movimientos.</small>
+              </div>
+              <strong>→</strong></a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="mt-4">
+        <div
+          class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-3"
+        >
+          <div>
+            <span class="eyebrow">COMUNIDAD INTERAPP</span>
+            <h2 class="mb-1">Productos de otros usuarios</h2>
+            <p class="muted mb-0">
+              Explora publicaciones y propón un intercambio con tus productos.
+            </p>
+          </div>
+          <input
+            class="form-control search-input"
+            id="marketSearch"
+            placeholder="Buscar en el catálogo..."
+          />
+        </div>
+        <div class="row g-3" id="marketplaceList"></div>
+      </section>
+    </main>
+    <div class="modal fade" id="exchangeModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <form id="exchangeForm">
+            <div class="modal-header">
+              <div>
+                <span class="eyebrow">NUEVA PROPUESTA</span>
+                <h2 class="modal-title fs-5">Proponer intercambio</h2>
+              </div>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="offered-product-box mb-3">
+                <small>PRODUCTO QUE TE INTERESA</small
+                ><strong id="targetProductName"></strong>
+                <p id="targetProductInfo" class="mb-0"></p>
+                <small id="targetOwner"></small>
+              </div>
+              <input type="hidden" id="targetProductId" />
+              <div class="mb-3">
+                <label class="form-label" for="myOfferProduct"
+                  >¿Cuál de tus productos ofreces?</label
+                ><select
+                  class="form-select"
+                  id="myOfferProduct"
+                  required
+                ></select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="exchangeMessage"
+                  >Mensaje para el propietario</label
+                ><textarea
+                  class="form-control"
+                  id="exchangeMessage"
+                  rows="3"
+                  required
+                  placeholder="Cuéntale por qué te interesa el intercambio..."
+                ></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cancelar</button
+              ><button class="btn btn-primary" type="submit">
+                Enviar propuesta
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="imageViewerModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content image-viewer-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-6" id="imageViewerTitle">
+              Imagen del producto
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="imageViewer" src="" alt="Imagen ampliada del producto" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../js/app.js"></script>
+  </body>
+</html>

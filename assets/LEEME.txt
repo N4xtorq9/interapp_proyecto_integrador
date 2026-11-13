@@ -1,0 +1,1 @@
+Agrega aquí tus cuatro imágenes y nómbralas banner-1.jpg, banner-2.jpg, banner-3.jpg y banner-4.jpg. También puedes cambiar las rutas en index.html.
