@@ -113,4 +113,26 @@ if (formProducto) {
     formProducto.hidden = !formProducto.hidden;
   });
   formProducto.addEventListener("submit", agregarProducto);
+
+  // ---------- MENÚ LATERAL ----------
+  let menuPerfil = document.querySelector("#menu-perfil");
+  let menuProductos = document.querySelector("#menu-productos");
+  let slider = document.querySelector("#seccion-slider");
+  let perfil = document.querySelector("#seccion-perfil");
+
+  // "Mis productos": oculta el slider y el perfil, deja solo mis productos
+  menuProductos.addEventListener("click", function () {
+    slider.style.display = "none";
+    perfil.style.display = "none";
+    menuProductos.classList.add("active");
+    menuPerfil.classList.remove("active");
+  });
+
+  // "Mi perfil": vuelve a mostrar todo
+  menuPerfil.addEventListener("click", function () {
+    slider.style.display = "";
+    perfil.style.display = "";
+    menuPerfil.classList.add("active");
+    menuProductos.classList.remove("active");
+  });
 }
