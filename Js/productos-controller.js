@@ -71,12 +71,18 @@ function agregarProducto(evento) {
   let sesion = obtenerSesion();
   let productos = obtenerProductos();
 
+  // Si no pegan el link de una imagen, se usa el logo
+  let imagen = formulario.imagen.value;
+  if (imagen == "") {
+    imagen = "assets/images/logo.png";
+  }
+
   let nuevoProducto = {
     codigo: generarCodigoProducto(productos),
     nombre: formulario.nombre.value,
     busco: formulario.busco.value,
     estado: formulario.estado.value,
-    imagen: "assets/images/logo.png",
+    imagen: imagen,
     duenoId: sesion.id,
   };
 

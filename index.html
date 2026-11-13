@@ -32,6 +32,86 @@
     </nav>
 
 
+    <!-- HERO SLIDER -->
+    <section class="container mt-4">
+        <section id="heroCarousel" class="carousel slide hero-slider" data-bs-ride="carousel">
+
+            <section class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </section>
+
+            <section class="carousel-inner">
+
+                <section class="carousel-item active">
+                    <img src="assets/images/slider/b-1.webp" class="d-block w-100" alt="Banner 1">
+
+                </section>
+
+                <section class="carousel-item">
+                    <img src="assets/images/slider/b-2.webp" class="d-block w-100" alt="Banner 2">
+
+                </section>
+
+                <section class="carousel-item">
+                    <img src="assets/images/slider/b-3.webp" class="d-block w-100" alt="Banner 3">
+
+                </section>
+
+            </section>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </section>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="container my-5">
+        <section class="row g-4">
+
+            <section class="col-6 col-md-3">
+                <section class="benefit-card1">
+                    <i class="bi bi-arrow-repeat"></i>
+                    <h5>Intercambio Fácil</h5>
+                    <p>Publica y recibe propuestas.</p>
+                </section>
+            </section>
+
+            <section class="col-6 col-md-3">
+                <section class="benefit-card1">
+                    <i class="bi bi-shield-fill-check"></i>
+                    <h5>Seguro</h5>
+                    <p>Usuarios verificados.</p>
+                </section>
+            </section>
+
+            <section class="col-6 col-md-3">
+                <section class="benefit-card1">
+                    <i class="bi bi-cash-coin"></i>
+                    <h5>Sin Dinero</h5>
+                    <p>Solo intercambio.</p>
+                </section>
+            </section>
+
+            <section class="col-6 col-md-3">
+                <section class="benefit-card1">
+                    <i class="bi bi-people-fill"></i>
+                    <h5>Comunidad</h5>
+                    <p>Miles de usuarios activos.</p>
+                </section>
+            </section>
+
+        </section>
+    </section>
+
+
     <!-- PRODUCTOS -->
     <section class="container my-5">
         <h2 class="mb-4">Productos Destacados</h2>
@@ -39,6 +119,36 @@
         <!-- Aquí productos-controller.js pinta los productos -->
         <section class="row g-4" id="lista-productos"></section>
     </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="how-section">
+        <section class="container text-center">
+            <h2 class="mb-5">¿Cómo funciona?</h2>
+
+            <section class="row">
+
+                <section class="col-md-4">
+                    <i class="bi bi-upload step-icon"></i>
+                    <h4>Publica</h4>
+                    <p>Sube tu producto fácilmente.</p>
+                </section>
+
+                <section class="col-md-4">
+                    <i class="bi bi-search-heart-fill step-icon"></i>
+                    <h4>Busca</h4>
+                    <p>Encuentra productos interesantes.</p>
+                </section>
+
+                <section class="col-md-4">
+                    <i class="bi bi-arrow-left-right step-icon"></i>
+                    <h4>Intercambia</h4>
+                    <p>Conecta con otros usuarios.</p>
+                </section>
+
+            </section>
+        </section>
+    </section>
+
 
     <!-- FOOTER -->
     <footer class="text-center">
@@ -49,6 +159,8 @@
     </footer>
 
 
+    <!-- Bootstrap JS (necesario para el slider) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="Js/productos-controller.js"></script>
 
 </body>
