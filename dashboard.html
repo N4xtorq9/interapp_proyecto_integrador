@@ -183,7 +183,7 @@
 
                     <section class="profile-info">
 
-                        <h2>Nestor Quiñones</h2>
+                        <h2 id="perfil-nombre"></h2>
 
                         <span class="member">
                             Miembro desde 2026
@@ -196,12 +196,12 @@
 
                         <p>
                             <i class="fa-solid fa-envelope-open-text"></i>
-                            n4xtor@gmail.com
+                            <span id="perfil-correo"></span>
                         </p>
 
                         <p>
                             <i class="fa-solid fa-mobile-screen-button"></i>
-                            +57 318 212 2259
+                            <span id="perfil-telefono"></span>
                         </p>
 
                         <section class="socials">
@@ -220,7 +220,7 @@
 
                     <section class="stat">
                         <i class="bi bi-box-seam-fill"></i>
-                        <h3>12</h3>
+                        <h3 id="total-productos">0</h3>
                         <p>Productos</p>
                     </section>
 
@@ -251,13 +251,13 @@
                 <!-- FORMULARIO (oculto hasta que se da clic en "Añadir productos") -->
                 <form id="form-producto" class="mb-4" hidden>
                     <label class="form-label" for="nombre">Nombre</label>
-                    <input class="form-control mb-3" id="nombre" required>
+                    <input class="form-control mb-3" id="nombre" name="nombre" required>
 
                     <label class="form-label" for="busco">¿Qué buscas a cambio?</label>
-                    <input class="form-control mb-3" id="busco" placeholder="Ej: Bicicleta" required>
+                    <input class="form-control mb-3" id="busco" name="busco" placeholder="Ej: Bicicleta" required>
 
                     <label class="form-label" for="estado">Estado</label>
-                    <select class="form-select mb-3" id="estado">
+                    <select class="form-select mb-3" id="estado" name="estado">
                         <option>Disponible</option>
                         <option>Intercambio</option>
                     </select>
@@ -265,45 +265,8 @@
                     <button class="btn btn-dark" type="submit">Guardar producto</button>
                 </form>
 
-                <section class="products-grid" id="mis-productos">
-
-                    <section class="product-card">
-
-                        <img src="assets/images/productos/1.jpg" alt="Producto 1">
-
-                        <h3>Iphone 17 pro max</h3>
-
-                        <p>Busco: Play Station 5</p>
-
-                        <span class="exchange-badge1">Disponible</span>
-
-                    </section>
-
-                    <section class="product-card">
-
-                        <img src="assets/images/productos/2.jpg" alt="Producto 2">
-
-                        <h3>Laptop HP</h3>
-
-                        <p>Busco: Smartwatch</p>
-
-                        <span>Disponible</span>
-
-                    </section>
-
-                    <section class="product-card">
-
-                        <img src="assets/images/productos/3.jpg" alt="Producto 3">
-
-                        <h3>Bicicleta</h3>
-
-                        <p>Busco: Tablet</p>
-
-                        <span>Disponible</span>
-
-                    </section>
-
-                </section>
+                <!-- Aquí productos-controller.js pinta mis productos -->
+                <section class="products-grid" id="mis-productos"></section>
 
             </section>
 
@@ -359,7 +322,9 @@
     <!-- Bootstrap JS (necesario para el slider) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="Js/app.js"></script>
-    <script src="Js/agregar-productos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="Js/auth-controller.js"></script>
+    <script type="module" src="Js/productos-controller.js"></script>
 
 </body>
 

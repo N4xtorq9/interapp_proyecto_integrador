@@ -19,3 +19,8 @@ export function redirectAlert(message, icon, url) {
     },
   });
 }
+
+// Alerta sencilla, sin redirigir. icon: "success", "error" o "warning"
+export function mostrarAlerta(message, icon) {
+  Swal.fire({ title: message, icon: icon });
+}
